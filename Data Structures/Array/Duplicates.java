@@ -1,0 +1,22 @@
+public class Duplicates {
+
+    static void printDuplicate(int arr[], int size) {
+        int i;
+        System.out.println("The repeating elements are: ");
+
+        for (i = 0; i < size; i++) {
+            int j = Math.abs(arr[i]);
+            if (arr[j] >= 0)
+                arr[j] = -arr[j];
+            else
+                System.out.print(j + " ");
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        int arr[] = { 1, 2, 3, 2, 6, 6, 7 };
+        int arr_size = arr.length;
+        printDuplicate(arr, arr_size);
+    }
+}
